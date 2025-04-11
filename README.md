@@ -24,14 +24,19 @@ Obtain Hi-C data in .hic format from a public database such as the 4D Nucleome D
 2. Extract Region Using straw
 Use Juicebox's straw tool to extract a specific genomic region from the .hic file into a sparse matrix format.Ensure your matrix is in a format readable by the entropy.py script (e.g., tab-separated).
 
-`    python preprocess.py
-`
+```
+python preprocess.py
+
+```
 
 4. Run Entropy Analysis
 Run the Python script to compute Von Neumann entropy from the matrix:
 
-`    python VECTOR.py
-`
+```
+python VECTOR.py
+
+```    
+
 5. Output
 
 The entropy values are saved to a .csv file for downstream analysis or visualization.
