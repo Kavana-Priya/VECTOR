@@ -3,7 +3,7 @@
 # This file is part of VECTOR.
 # Contribution: Kavana Priyadarshini Keshava,Dieter W. Heermann, Arnab Bhattacherjee 
 # Usage :python similarity.py ./celline1/clustered_entropy.csv ./cellline2/clustered_entropy.csv 
-###################Pakages####################################################
+###################Packages##############
 import argparse
 import pandas as pd
 from scipy.stats import pearsonr
