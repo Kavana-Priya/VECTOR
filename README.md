@@ -30,7 +30,7 @@ python preprocess_hic.py file.hic chromosome:start:end resolution --normalizatio
 
 ```
 
-4. Run VECTOR : Entropy Analysis
+3. Run VECTOR : Entropy Analysis
 Compute the Von Neumann entropy of the extracted Hi-C contact matrix using the VECTOR.py script.
 
 ```
@@ -40,7 +40,7 @@ python VECTOR.py symmetric_dense_3col.tsv
 This will output entropy values saved in a .csv file.
 
 
-5. Entropy Similarity Check
+4. Entropy Similarity Check
 
 Compare Von Neumann entropy profiles between two Hi-C datasets using the similarity.py script:
 
