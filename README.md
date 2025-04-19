@@ -14,6 +14,7 @@ numpy
 networkx  
 matplotlib  
 scikit-learn
+hicstraw
 
 
 # Usage
@@ -21,24 +22,33 @@ scikit-learn
 1. Download .hic File
 Obtain Hi-C data in .hic format from a public database such as the 4D Nucleome Data Portal or GEO.
 
-2. Extract Region Using straw
-Use Juicebox's straw tool to extract a specific genomic region from the .hic file into a sparse matrix format.Ensure your matrix is in a format readable by the entropy.py script (e.g., tab-separated).
+2. Extract Genomic Region Using straw
+Use the straw tool from Juicebox to extract a specific genomic region from the .hic file into a tab-separated 3 column format compatible with the VECTOR.py script.
 
 ```
-python preprocess.py
+python preprocess_hic.py file.hic chromosome:start:end resolution --normalization KR/NONE
 
 ```
 
-4. Run Entropy Analysis
-Run the Python script to compute Von Neumann entropy from the matrix:
+4. Run VECTOR : Entropy Analysis
+Compute the Von Neumann entropy of the extracted Hi-C contact matrix using the VECTOR.py script.
 
 ```
-python VECTOR.py
+python VECTOR.py symmetric_dense_3col.tsv
 
-```    
+```
+This will output entropy values saved in a .csv file.
 
-5. Output
 
-The entropy values are saved to a .csv file for downstream analysis or visualization.
+5. Entropy Similarity Check
+
+Compare Von Neumann entropy profiles between two Hi-C datasets using the similarity.py script:
+
+```
+python similarity.py ./celline1/clustered_entropy.csv ./cellline2/clustered_entropy.csv 
+
+```   
+This step helps quantify structural similarity based on entropy features.
+
 
 
