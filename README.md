@@ -2,7 +2,7 @@
 
 VECTOR is a computational tool designed to quantify and compare Hi-C contact maps using a graph-based approach. It enables the differentiation of two Hi-C matrices — including those from different developmental stages or even biological replicates — by transforming contact frequency data into graph representations.
 
-Each Hi-C matrix is modeled as a graph where genomic loci are nodes and contact frequencies are weighted edges. Using this transformation, VECTOR computes the Laplacian matrix and derives its eigenvalues to calculate the Von Neumann entropy, which serves as a measure of the complexity or structural diversity within the contact map.
+The Hi-C matrix is modeled as a graph where genomic loci are nodes and contact frequencies are weighted edges. Using this transformation, VECTOR computes the Laplacian matrix and derives its eigenvalues to calculate the Von Neumann entropy, which serves as a measure of the complexity or structural diversity within the contact map.
 
 This method provides a robust and sensitive metric to evaluate subtle changes in chromatin organization across conditions, developmental stages, or experimental replicates. 
 
